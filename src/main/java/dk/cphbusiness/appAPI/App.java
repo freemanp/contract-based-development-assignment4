@@ -9,7 +9,6 @@ public class App implements IAppAPI {
 
 	public void lendItem(MemberDTO fromMember, MemberDTO toMember, ItemDTO item)
 			throws NullPointerETO, IllegalStateETO {
-		
 	}
 
 }

@@ -6,11 +6,13 @@ public class Rental {
 	private Date startOfRental;
 	private Date expectedHandBack;
 	private Date actualHandBack;
+	private Item item;
 
-	public Rental(Date startOfRental, Date expectedHandBack, Date actualHandBack) {
+	public Rental(Date startOfRental, Date expectedHandBack, Date actualHandBack, Item item) {
 		this.startOfRental = startOfRental;
 		this.expectedHandBack = expectedHandBack;
 		this.actualHandBack = actualHandBack;
+		this.item = item;
 	}
 
 	public Date getStartOfRental() {
@@ -35,5 +37,13 @@ public class Rental {
 
 	public void setActualHandBack(Date actualHandBack) {
 		this.actualHandBack = actualHandBack;
+	}
+
+	public Item getItem() {
+		return item;
+	}
+
+	public void setItem(Item item) {
+		this.item = item;
 	}
 }

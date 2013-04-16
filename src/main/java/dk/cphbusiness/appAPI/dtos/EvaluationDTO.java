@@ -1,12 +1,16 @@
 package dk.cphbusiness.appAPI.dtos;
 
+import dk.cphbusiness.models.Member;
+
 public class EvaluationDTO {
 	private String comment;
 	private int score;
-
-	public EvaluationDTO(String comment, int score) {
+	private Member evaluator;
+	
+	public EvaluationDTO(String comment, int score, Member evaluator) {
 		this.comment = comment;
 		this.score = score;
+		this.setEvaluator(evaluator);
 	}
 
 	public String getComment() {
@@ -23,5 +27,13 @@ public class EvaluationDTO {
 
 	public void setScore(int score) {
 		this.score = score;
+	}
+
+	public Member getEvaluator() {
+		return evaluator;
+	}
+
+	public void setEvaluator(Member evaluator) {
+		this.evaluator = evaluator;
 	}
 }
